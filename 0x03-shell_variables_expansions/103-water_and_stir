@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $WATER $STIR | tr ' water' '0-9+' | bc | tr '0-9' ' bestchol'
+echo $(($(echo $WATER | tr 'water' '01234') + $(echo $STIR | tr 'stir.' '01234'))) | tr '0123456789' ' bestchol'
